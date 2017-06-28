@@ -1,0 +1,9 @@
+kops create cluster --name=kubernetes.cinepanda.com --state=s3://kops-state-jay --zones=ap-south-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes.cinepanda.com
+
+
+
+kops update cluster kubernetes.cinepanda.com --yes --state s3://kops-state-jay
+
+
+
+kops delete cluster --name kubernetes.cinepanda.com --state=s3://kops-state-jay --yes

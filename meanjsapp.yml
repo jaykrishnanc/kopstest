@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meanjsapp.kubernetes.cinepanda.com 
+  labels:
+    app: meanjsapp
+spec:
+  containers:
+  - name: meanjsapp
+    image: jaykrishnanc/meanjsapp
+    ports:
+    - name: meanjsapp-port
+      containerPort: 3000
